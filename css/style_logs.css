@@ -1,0 +1,274 @@
+
+a {
+    cursor: pointer;
+}
+.cont{
+    padding: 10px;
+    margin: 0px auto;
+    color: #333;
+    background-color: #F5F5F5;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    min-width: 800px;
+    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.48); /* ��������� ���� */
+}
+
+.container_body {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.group_img{
+    width: 20px;
+}
+
+.group_download{
+    width: 15px;
+    margin-left: 5px;
+}
+
+.container{
+    width: 1400px !important;
+}
+
+.cell{
+    text-align: center;
+}
+
+.gma_table{
+    width: 50%;
+}
+
+.gma_table input{
+    width: 200px;
+}
+.gma_table textarea{
+    width: 200px;
+}
+
+.short_input{
+    width: 300px !important;
+}
+
+.width_50{
+    width: 50px !important;
+}
+
+.width_100{
+    width: 100px !important;
+}
+
+.width_150{
+    width: 150px !important;
+}
+
+.width_200{
+    width: 200px !important;
+}
+
+.width_250{
+    width: 250px !important;
+}
+
+.hide {
+    display: none;
+}
+
+.actions_table{
+    width: auto!important;
+}
+
+.ajax-link{
+    cursor: pointer;
+}
+.active{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* ��������� ���� */
+}
+
+.debug_table td{
+    padding: 5px;
+}
+
+ .mess_gl{
+     position: fixed;
+     z-index: 99999;
+     bottom: 5%;
+     right: 1%;
+     width: auto;
+     font-size: 16px;
+     height: 45px;
+     border-radius: 8px;
+     padding: 5px 15px 5px 15px;
+     background-repeat: repeat-x;
+     border: 1px solid #a5a5a5;
+     display: none;
+     vertical-align: text-bottom;
+     text-align: center;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.48); /* ��������� ���� */
+
+ }
+#orig_text {
+    display: none;
+}
+#orig_text pre {
+    background-color: #fff;
+}
+
+#loading_global{
+    background-color: #efefef;
+    background-image: -moz-linear-gradient(center top , #f5f5f5, #f5f5f5);
+}
+.red_color{
+    background-color: #ffd5ba;
+    background-image: -moz-linear-gradient(center top , #ffcdb9, #fcc8b3);
+}
+.green_color{
+    background-color: #eeffe4;
+    background-image: -moz-linear-gradient(center top , #eeffe4, #e6f7dc);
+}
+.tooltip-inner {
+    text-align:left;
+}
+
+.white, .white a {
+    color: #fff;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.info_table{
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+}
+
+#traceMaxLen,#CheckLen{
+    width: 450px;
+}
+
+#traceMaxReportLen{
+    width: 450px;
+}
+
+.traceMax{
+    font-size: 14px;
+    padding: 5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.check_name{
+    display: inline !important;
+    width: 200px !important;
+}
+.inline{
+    display: inline !important;
+
+}
+
+#device_ip {
+    width: 135px !important;
+}
+
+.check_image {
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #FFF;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    padding: 15px 15px 15px;
+    border-color: #a8a8a8 #cfcfcf;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05) inset;
+}
+
+.check_body {
+    min-width: 800px;
+}
+hr{
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+}
+
+.navbar-nav > li > a  {
+    padding: 15px 8px !important;
+}
+
+.check-table{
+
+}
+.check-table td{
+    vertical-align: top;
+    padding: 2px;
+    font-size: 15px;
+
+}
+.check-table td:first-child{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.check-table th{
+    text-align: center;
+}
+
+#myModal,#AccessModal{
+    margin-top: 2%;
+}
+
+#AccessModal{
+    width: auto; /* desired relative width */
+}
+
+.small_photo{
+    max-height: 120px;
+}
+
+.middle_photo{
+    max-height: 170px;
+}
+
+input[name=new_ldap],input[name=add_reason]{
+    width: 150px;
+    display: inline;
+}
+
+.tooltip-inner {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.48); /* ��������� ���� */
+    border: 1px ;
+    border-color: #2d6b9f !important;
+    max-width: 350px !important;
+}
+
+.tooltip-inner {
+    background-color: #337AB7 !important;
+    padding: 5px;
+    color: #fff !important;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #337AB7 !important;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #337AB7 !important;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #337AB7 !important;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #337AB7 !important;
+}
+.fl_left{
+    float: left;
+    padding: 5px;
+}

@@ -1,0 +1,1 @@
+git pull trace master

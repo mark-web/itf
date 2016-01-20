@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+    <title>Hello SyntaxHighlighter</title>
+    <script type="text/javascript" src="scripts/shCore.js"></script>
+    <script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body style="background: white; font-family: Helvetica">
+
+    <h1>Hello js</h1>
+
+    <pre class="brush: js;">
+	function helloSyntaxHighlighter()
+	{
+		return "hi!";
+	}
+	</pre>
+
+    <h1>Hello xml</h1>
+    <pre class="brush: xml;">
+            <?xml version="1.0" encoding="utf-8"?>
+                <recipe name="хлеб" preptime="5min" cooktime="180min">
+                    <title>
+                        Простой хлеб
+                    </title>
+                    <composition>
+                        <ingredient amount="3" unit="стакан">Мука</ingredient>
+                        <ingredient amount="0.25" unit="грамм">Дрожжи</ingredient>
+                        <ingredient amount="1.5" unit="стакан">Тёплая вода</ingredient>
+                        <ingredient amount="1" unit="чайная ложка">Соль</ingredient>
+                    </composition>
+                    <instructions>
+                        <step>
+                            Смешать все ингредиенты и тщательно замесить.
+                        </step>
+                        <step>
+                            Закрыть тканью и оставить на один час в тёплом помещении.
+                        </step>
+                        <!--
+                           <step>
+                              Почитать вчерашнюю газету.
+                           </step>
+                            - это сомнительный шаг...
+                         -->
+                        <step>
+                            Замесить ещё раз, положить на противень и поставить в духовку.
+                        </step>
+                    </instructions>
+                </recipe>
+	</pre>
+
+</body>
+
+</html>
