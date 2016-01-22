@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="app">
 <head>
     <title>Page title</title>
     <meta charset="utf-8" />
@@ -7,42 +7,37 @@
     <meta http-equiv="Description" content="" />
     <meta http-equiv="Keywords" content="" />
 
+    <link rel="stylesheet" type="text/css" href = "/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <script src="/lib/other/scripts/angular.min.js"></script>
     <script src="/lib/other/scripts/angular-route.min.js"></script>
+    <script src="/js/main.js"></script>
 
 </head>
 
-<body ng-app>
+<body ng-controller="mainCtrl">
 
-
-<div id="main">
-    <!-- Всем переменным классов в меню навигации будет присвоено значение "active". Функция $event.preventDefault() выводит страницу, которая была открыта по ссылке. -->
-    <nav class="{{active}} nav navbar-nav" ng-click="$event.preventDefault()">
-        <ul class="nav navbar-nav">
+<!--ng-click="$event.preventDefault()"-->
+<header id="menu" class="menu">
+        <ul class="nav navbar-nav {{active}}">
         <!-- Когда пункт меню открыт по ссылке, мы устанавливаем активные переменные -->
         <?
         foreach($menu as $key=>$val){
             echo '<li class = "'.$key.'">
-                    <a id="'.$key.'" href="#" class="'.$key.' ajax-link" ng-click="active=\''.$key.'\'">'.$val.'</a>
+                    <a id="'.$key.'" href="#/'.$key.'" class="'.$key.' ajax-link" ng-click="active=\''.$key.'\'">'.$val.'</a>
                   </li>';
         }
         ?>
-<!--        <a href="#" class="home" ng-click="active='home'">Home</a>-->
-<!--        <a href="#" class="projects" ng-click="active='projects'">Projects</a>-->
-<!--        <a href="#" class="services" ng-click="active='services'">Services</a>-->
-<!--        <a href="#" class="contact" ng-click="active='contact'">Contact</a>-->
         </ul>
-    </nav>
-</div>
-<section class="wrapper">
-    <div class="container">
-        <!-- ng-show выводит элемент, если значение переменной в кавычках соответствует истине. ng- hide – скрывает элемент, если наоборот. Так как изначально  активная переменная не установлена, то сперва на экране будет виден следующий текст -->
-        <p ng-hide="active">Please click a menu item</p>
-        <p ng-show="active">You chose <b>{{active}}</b></p>
 
-        <!--<div ng-view></div>-->
-    </div>
+<!--    <p ng-hide="active">Please click a menu item</p>-->
+<!--    <p ng-show="active">You chose <b>{{active}}</b></p>-->
+</header>
+<section class="wrapper">
+    <article class="container">
+        <!-- ng-show выводит элемент, если значение переменной в кавычках соответствует истине. ng- hide – скрывает элемент, если наоборот. Так как изначально  активная переменная не установлена, то сперва на экране будет виден следующий текст -->
+        <ng-view></ng-view>
+    </article>
 </section>
 
 <!--<nav class="navbar navbar-default navbar-fixed-top">-->

@@ -29,7 +29,7 @@ class Users extends CI_Controller {
 	public function Get($userId=0)
 	{
 		if(isset($userId) && (int)$userId>0){
-			$this->user_id=$userId;
+			$this->userId=$userId;
 		}
 		echo json_encode($this->mod->getUsers());
 	}
