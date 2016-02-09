@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app='App'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="script/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container" ng-controller="myCtrl">
+    <br>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+
+        <div class="panel-heading">Пользователи</div>
+        <ng-include src="'views/user_table.html'" ng-show = "currentView == 'userTable'"></ng-include>
+        <ng-include src="'views/add_user.html'" ng-show = "currentView == 'addUser'"></ng-include>
+        
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<br><button type="button" class="btn btn-success left_2" data-ng-click="addUser()">Добавить пользователя</button><br><br>
+<table class="table" ng-show="user_list.length !==0">
+    <tr  class="bold">
+        <td>№</td>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Возраст</td>
+        <td></td>
+    </tr>
+    <tr ng-repeat = "user in user_list">
+        <td>{{user_list.indexOf(user)+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.age}}</td>
+        <td class="right">
+            <button class="btn btn-danger" data-ng-click="remove_user($index)">Удалить</button>
+            <button class="btn btn-success" data-ng-click="edit_user($index)">Редактировать</button>
+        </td>
+    </tr>
+</table>
