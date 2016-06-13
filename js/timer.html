@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>first title</title>	
+	<meta	charset="utf-8" />
+	<script type="text/javascript" src="lib/jquery-2.2.3.min.js"/></script>
+</head>
+<body>
+<!-- ******** TIMER ****** -->
+<div class="time">
+	<div class="name-t"></div>
+	<div id="timer"><div class="days">00<span>Дни</span></div><div class="hours">00<span>Часы</span></div><div class="mins">00<span>Минуты</span></div>
+	<div class="secs">00<span>Секунды</span></div></div>
+</div>
+
+<script>
+
+function getGoodNumber(number){
+
+	if(parseInt(number)<10){
+		number = '0'+number;
+	}
+
+	return number;
+}
+
+function getDateDiff(diffSeconds){
+		
+
+		var days = Math.floor(diffSeconds/86400);	
+
+			diffSeconds = diffSeconds - days*86400;
+
+		var hours = Math.floor( (diffSeconds )/3600 );
+
+			diffSeconds = diffSeconds - hours*3600;
+
+		var minutes = Math.floor( ( diffSeconds )/60 );
+		var seconds = Math.floor( (diffSeconds - minutes*60) );
+
+		var out = "<div class='days'>" + days + "<span>Дней</span></div>" + "<div class='hours'>" + getGoodNumber(hours) + "<span>Часов</span></div>" + "<div class='mins'>" + getGoodNumber(minutes) + "<span>Минут</span></div>" + "<div class='secs'>" + getGoodNumber(seconds) + "<span>Секунд</span></div>";
+
+		$('#timer').html(out);		
+
+		//setTimeout("getDateDiff()", 1000);		
+}
+
+
+$(document).ready(function(){
+
+	var seconds = 0,
+		intervalId;
+
+	var now = new Date();
+		//2014.05.16 19:05:12
+	var then = new Date(2016, 4, 19);
+
+	var diffSeconds = Math.floor((then - now)/1000);
+
+		if(!intervalId){
+			intervalId = setInterval(function(){
+
+				getDateDiff(diffSeconds);
+				diffSeconds--;
+
+			if(diffSeconds<=0){
+				clearInterval(intervalId);		
+			}
+
+			},1000);		
+		}
+});
+
+</script>
+
+<style>
+	/******** timer ***********/
+.time {
+   /* position: absolute;*/
+    right: 86px;
+    top: 400px;
+}
+
+.time .name-t {
+    font-size: 18px;
+    padding: 0 0 10px;
+    text-align: center;
+}
+.time #timer div {
+    background: url("button-timer.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: white;
+    display: inline-block;
+    font-family: arial;
+    font-size: 30px;
+    font-weight: bold;
+    height: 85px;
+    margin: 0 0 0 20px;
+    padding: 12px 3px 3px 0;
+    position: relative;
+    text-align: center;
+    width: 68px;
+}
+.time span {position: absolute;width: 70px;text-align: center;left: 50%;margin-left: -34px;top: 63px;font-weight:300;line-height: 30px;color:#000;font-size:12px;font-family:'Open Sans',arial,sans-serif;}
+</style>
+
+<!-- ********END TIMER ****** -->
+
+</body>
+</html>
